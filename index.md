@@ -69,26 +69,32 @@ $$p(y_t \mid z_t = 1) = \text{von Mises}(y_t \mid \alpha, \kappa_{\text{ev}}) = 
 
 
 
-State 0 (Prior state) represents observations that cluster around 0, which is the prior mean and State 1(Evidence state) represents those that cluster around the displayed stimulus angle.
+State 0 (Prior state) represents observations that cluster around 0, which is the prior mean and State 1 (Evidence state) represents those that cluster around the displayed stimulus angle.
+
+```{raw:typst}
+#pagebreak(weak:true)
+```
 
 # Results and discussion
 
-Results demonstrated a significant improvement of model fit of the input HMM compared with PM, AIC= 1996.22, BIC= 1772.32. While previous static models correctly identified that observers switch between discrete prior-dependent and evidence-dependent states, our work demonstrates that this switching is a dynamic, memory-retaining process driven by temporal inertia and actively updated by shifting covariates, such as motion coherence and large stimulus-angle deviations(@figure-param ). Our study extends the switching observer phenomenon by providing a temporal account for individual differences in strategy switching that could account for the accuracy difference between the two, where subject 1 has a mean error rate of 29.38% and subject 10 has 67.17% error in the high difficulty block, respectively(@figure-main), implying these fluctuations discrepancies could reflect attentional allocation and that relying on priors with changing coherence might not be optimal.
-
-One of our limitations is that we assumed that the behavioral variabilities were explained by kprior and kevidence that motor noises and random lapses are not modelled. Future studies could disentangle the psychological meaning behind a “prior state”: whether it involves a strategic exploration or merely disengagement.
+Results demonstrated a significant improvement of model fit of the input HMM compared with PM, AIC= 1996.22, BIC= 1772.32. While previous static models correctly identified that observers switch between discrete prior-dependent and evidence-dependent states, our work demonstrates that this switching is a dynamic, memory-retaining process driven by temporal inertia and actively updated by shifting covariates, such as motion coherence and large stimulus-angle deviations (@figure-param). Our study extends the switching observer phenomenon by providing a temporal account for individual differences in strategy switching that could account for the accuracy difference between the two, where subject 1 has a mean error rate of 29.38% and subject 10 has 67.17% error in the high difficulty block, respectively (@figure-main), implying these fluctuations discrepancies could reflect attentional allocation and that relying on priors with changing coherence might not be optimal.
 
 ```{figure} figures/figure1.png
 :name: figure-param
-:alt: Figure 1.
+:alt: Group-level parameter distributions from the HMM model
 
 Group-level parameter distributions from the HMM model: compared with coherence, alpha() has less weight on driving state transitions. Baseline transition probabilities P(0->1) indicated that, without strong coherence, subjects tend to stay at the prior state once they start relying on it to make decisions.
 ```
 
 
+One of our limitations is that we assumed that the behavioral variabilities were explained by kprior and kevidence that motor noises and random lapses are not modelled. Future studies could disentangle the psychological meaning behind a “prior state”: whether it involves a strategic exploration or merely disengagement.
+
+
+
 
 ```{figure} figures/figure2.png
 :name: figure-main
-:alt: Figure 2.
+:alt: Modelled assigned/learned latent-state fluctuations across different runs and subjects
 
 The plots show modelled assigned/learned latent-state fluctuations across different runs and subjects, denoted by the orange curve, P(evidence), and how these fluctuations are driven by coherence input sensitivity to transition (the coherence component of $w_{j,k}^\top u_t$ at time $t$).Under the same prior std (i.e., 80 degrees), which reflects significant task difficulty, some subjects, like subject 1, show time-dependent persistence in the evidence mode even though the coherence input has remained low across consecutive trials. In contrast, subject 10 shows more frequent state fluctuations following the input, with transitions to the prior mode immediately upon low coherence, and only stays in the evidence mode when coherence is high. 
 
