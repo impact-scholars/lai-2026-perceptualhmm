@@ -71,7 +71,7 @@ Results demonstrated a significant improvement of model fit of the input HMM com
 
 One of our limitations is that we assumed that the behavioral variabilities were explained by kprior and kevidence that motor noises and random lapses are not modelled. Future studies could disentangle the psychological meaning behind a “prior state”: whether it involves a strategic exploration or merely disengagement.
 
-```{figure} figure1.png
+```{figure} figures/figure1.png
 :name: figure-param
 :alt: Figure 1.
 
@@ -80,7 +80,7 @@ Group-level parameter distributions from the HMM model: compared with coherence,
 
 
 
-```{figure} figure2.png
+```{figure} figures/figure2.png
 :name: figure-main
 :alt: Figure 2.
 
