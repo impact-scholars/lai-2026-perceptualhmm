@@ -10,9 +10,13 @@ data_availability: |
     Published via [Impact Scholars](https://github.com/impact-scholars/lai-2026-perceptualhmm); original [development repository](https://github.com/vicvic0227/victoria-lai-2026-perceptualhmm).
 ---
 
+# Introduction
+
 The current project used the NMA dataset for the perceptual dot motion decision-making task {cite:p}`LaquitaineSwitchingObserverHuman2018a`. In the original paper, the author proposed that the process of estimating the motion direction, the switching observer model was a better fit than the Bayesian observer model (the posterior distribution resulting from the observed percept in a particular trial by the prior), as the former provide more explanatory power to the phenomenon of the bimodality distribution of individuals’ estimates when the presented motion was very different from the constant prior experimental mean of  225˚. The experiment dissociates the effect of sensory evidence and priors by varying the  1) motion coherence–percentage of dots moving in the same direction, and 2) prior standard deviation – the strength of the presented dot distribution, and suggested that switching observers will switch between prior and evidence that depends on the two factors. For example, when motion coherence is low, subjects tend to choose estimates from the prior distribution, leading to a bias toward estimates near the prior, whereas an increase in prior standard deviation introduces greater variability in subjects’ estimates. 
 
 However, they did not pursue the question further. Since the switching observer model assumes subjects switch between prior mean and sensory evidence based on their relative strength independently over time, we aim to examine whether switching behaviour is time-dependent and whether factors such as motion coherence can influence individuals' internal states during decision-making. Recent reviews have challenged the assumption that decision strategies are stable across trials and have shown that models that deploy non-stationary dynamics, such as discrete-state switches, provide greater explanatory power for human behaviour than some standard static models {cite:p}`GunawanTimeevolvingPsychologicalProcesses2022;uraiStructureUncoveredUnderstanding2026a`. To determine whether observers continuously integrate expectations and sensory evidence into a single percept while perceptual noise remains constant across trials, or whether they discretely switch between independent cognitive states, whether the switching is dependent on previous states and precision of sensory processing, we compared 3 models, Probabilistic Mixture model (PM), Weighted Mean model (WM) and the Hidden Markov Model.
+
+# Methods
 
 ## Weighted Mean model with a global variance (WM) 
  Unlike a discrete-switching framework, this model assumes that on every trial t, the brain multiplicatively combines its internal structural expectation (the prior) with the incoming sensory evidence to form a unified, blended posterior mean. The relative contribution of sensory evidence versus prior is determined by a trial-by-trial linear predictor $w_{\text{evidence,t}}$ and $w_{\text{prior,t}}$, which passes through a standard logistic function:
@@ -66,6 +70,8 @@ $$p(y_t \mid z_t = 1) = \text{von Mises}(y_t \mid \alpha, \kappa_{\text{ev}}) = 
 
 
 State 0 (Prior state) represents observations that cluster around 0, which is the prior mean and State 1(Evidence state) represents those that cluster around the displayed stimulus angle.
+
+# Results and discussion
 
 Results demonstrated a significant improvement of model fit of the input HMM compared with PM, AIC= 1996.22, BIC= 1772.32. While previous static models correctly identified that observers switch between discrete prior-dependent and evidence-dependent states, our work demonstrates that this switching is a dynamic, memory-retaining process driven by temporal inertia and actively updated by shifting covariates, such as motion coherence and large stimulus-angle deviations(@figure-param ). Our study extends the switching observer phenomenon by providing a temporal account for individual differences in strategy switching that could account for the accuracy difference between the two, where subject 1 has a mean error rate of 29.38% and subject 10 has 67.17% error in the high difficulty block, respectively(@figure-main), implying these fluctuations discrepancies could reflect attentional allocation and that relying on priors with changing coherence might not be optimal.
 
