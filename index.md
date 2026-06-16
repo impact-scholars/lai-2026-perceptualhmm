@@ -4,11 +4,19 @@ title: Time-dependent strategy dynamics in a perceptual decision-making task
 abstract: |
     Human perceptual estimation balances internal expectations with incoming sensory evidence. While static switching models demonstrate that observers alternate between discrete prior-dependent and evidence-tracking states, whether these transitions are time-independent or governed by dynamic, past-dependent cognitive momentum remains unclear. Using an input-driven Hidden Markov Model (HMM) fitted via the Expectation-Maximisation algorithm, we reanalysed human motion-direction estimates. Our dynamic model outperformed static variants by a large margin, revealing strong temporal inertia in strategy selection. Furthermore, transitions were actively modulated by trial-by-trial sensory coherence and spatial surprise, providing evidence for a boundedly rational brain that dynamically regulates state-dependent processing precision.
 
+parts:
+  zenodo_extra_description: |
+    Original submitted version (not yet revised).
+
 acknowledgments: |
     This work was supported by the Impact Scholars Program.
 data_availability: |
     Published via [Impact Scholars](https://github.com/impact-scholars/lai-2026-perceptualhmm); original [development repository](https://github.com/vicvic0227/victoria-lai-2026-perceptualhmm).
 ---
+
+:::{note}
+This manuscript is provided in its original submitted form and has not yet been revised following review. Any corrections or modifications resulting from the review process are not reflected in this version. A revised version will be made available after resubmission.
+:::
 
 # Introduction
 
