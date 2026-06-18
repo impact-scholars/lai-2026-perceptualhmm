@@ -40,6 +40,11 @@ project:
   - Bounded Rationality
   - Temporal Inertia
   github: https://github.com/impact-scholars/lai-2026-perceptualhmm
+  options:
+    youtube: https://youtu.be/Sud1Lw9I3o4?t=1697
+  downloads:
+  - title: Seminar Presentation
+    url: https://youtu.be/Sud1Lw9I3o4?t=1697
   bibliography:
   - impact_scholars.bib
   date: '2026-06-16'
